@@ -1,6 +1,6 @@
-###HyperAdam: A Learnable Task-Adaptive Adam for Network Training
-
-####Introduction
+HyperAdam: A Learnable Task-Adaptive Adam for Network Training
+=
+Introduction
 
 The current project page provides tensorflow code that implements our AAAI2019 paper:
 
