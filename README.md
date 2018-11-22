@@ -8,6 +8,8 @@ The current project page provides tensorflow code that implements our AAAI2019 p
 
 **Authors**: Shipeng Wang, Jian Sun*, Zongben Xu
 
+**Email:** wangshipeng8128@stu.xjtu.edu.cn
+
 **Institution**: School of Mathematics and Statistics, Xi'an Jiaotong University
 
 **Code**:  https://github.com/ShipengWang/HyperAdam-Tensorflow
