@@ -14,7 +14,7 @@ The current project page provides tensorflow code that implements our AAAI2019 p
 
 **Code**:  https://github.com/ShipengWang/HyperAdam-Tensorflow
 
-**Arxiv**: TODO
+**Arxiv**: https://arxiv.org/abs/1811.08996
 
 **Abstract**:
 
