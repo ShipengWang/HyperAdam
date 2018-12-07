@@ -6,6 +6,7 @@ import os
 from main import log
 import matplotlib.pyplot as plt
 import timeit
+
 # batch size = 1
 
 curr_path = os.getcwd()
@@ -189,7 +190,7 @@ class BasicNNOptModel:
                 = session.run([self.apply_gradients, self.gradients, self.states, self.loss, self.summaries,
                                self.all_internal_loss, self.optimizee_grad[0:-1]],
                               feed_dict=feed_dict)
-            val_state = val_state_all[-1]  
+            val_state = val_state_all[-1]
             losses.append(val_loss)
         ret['loss'] = np.mean(losses)
 
@@ -296,12 +297,10 @@ class BasicNNOptModel:
                     feed_dict.update(dict(zip(self.input_state, val_state)))
                     feed_dict.update(data_dicts[i])
                     x_p = val_state[0]
-                    #  , optimizee_grad self.optimizee_grad[-1]
                     val_state, loss \
                         = session.run([test['state'], test['fx']], feed_dict=feed_dict)
                     losses.append(loss)
 
-                # loss on the whole test datasets (may be a batch, when flag.n_tests !=1)
                 for i in range(n_steps / s):
                     feed_dict = internal_feed_dict
                     feed_dict.update(dict(zip(self.input_state, val_state)))
@@ -322,10 +321,10 @@ class BasicNNOptModel:
                         # training phase with gradient descent, get weights
 
                     # loss on the whole test datasets(may be a batch, when flag.n_tests !=1)
-                     for i in range(n_steps / s):
-                         feed_dict = internal_feed_dict
-                         feed_dict.update(data_dicts[i])
-                         val_gd_final_loss += session.run(test['gd_fx'], feed_dict=feed_dict)
+                    for i in range(n_steps / s):
+                        feed_dict = internal_feed_dict
+                        feed_dict.update(data_dicts[i])
+                        val_gd_final_loss += session.run(test['gd_fx'], feed_dict=feed_dict)
             val_final_loss /= n_steps
             val_gd_final_loss /= n_steps
 
@@ -341,7 +340,6 @@ class BasicNNOptModel:
                 continue
             internal_feed_dict = test['optimizee'].next_internal_feed_dict()
             n_steps = test['n_steps']
-            # n_steps: how many times of step descent every epoch
 
             val_x = test['optimizee'].get_initial_x()
             # initial weights of optimizee,

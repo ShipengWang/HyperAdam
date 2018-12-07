@@ -35,6 +35,7 @@ class MnistLinearModel(optimizee.Optimizee):
             data_path = os.path.join(datasets, "MNIST_data/")
             MnistLinearModel.mnist = input_data.read_data_sets(data_path, one_hot=True)
         self.mnist = MnistLinearModel.mnist
+
     def build(self):
         self._build_dataset()
         self.x = tf.placeholder(tf.float32, [None, None, 784])
@@ -138,6 +139,7 @@ def forward():
     print (f,a)
     return f, a
 
+
 def main(_):
     graph = tf.Graph()
     os.environ["CUDA_VISIBLE_DEVICES"] = str(0)
@@ -147,6 +149,7 @@ def main(_):
         with tf.Session(config=tf.ConfigProto(gpu_options=gpu_options), graph=graph) as session:
 
              f,a = forward()
+
 
 if __name__ == '__main__':
     tf.app.run()
