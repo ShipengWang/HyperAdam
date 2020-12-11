@@ -27,15 +27,12 @@ Citing our paper
 If the code is useful in your research, please cite our AAAI2019 paper:
 
 @inproceedings{wang2019hyperadam,
-
 title={HyperAdam: A Learnable Task-Adaptive Adam for Network Training},
-
-author={Shipeng Wang, Jian Sun, Zongben Xu},
-
-booktitle={AAAI Conference on Artificial Intelligence},
-
+author={Wang, Shipeng and Sun, Jian and Xu, Zongben},
+booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
 year={2019},
-
+pages={5297--5304},
+volume={33},
 }
 
 Requirements
