@@ -13,6 +13,7 @@ The current project page provides tensorflow code that implements our AAAI2019 p
 **Institution**: School of Mathematics and Statistics, Xi'an Jiaotong University
 
 **Code**:  https://github.com/ShipengWang/HyperAdam-Tensorflow  
+           https://github.com/ShipengWang/Variational-HyperAdam (PyTorch)
 
 **Link**: https://ojs.aaai.org//index.php/AAAI/article/view/4466
 
