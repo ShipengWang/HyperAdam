@@ -45,7 +45,7 @@ volume={33},
 Requirements
 -
 + python 2.7
-+ TensorFlow 1.5
++ TensorFlow 1.5 or PyTorch 1.0
 
 
 
